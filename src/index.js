@@ -23,8 +23,9 @@ app.listen(3000, async () => {
     // console.log(tweet);
     // tweet.comments.push(comment);
     // await tweet.save();
-    const tweet = await tweetRepo.getWithComments('63d51caf39f458df2014f5fa');
+    const tweet = await tweetRepo.getAll(2, 4);
 
     console.log(tweet);
+    console.log(tweet[0].contentWithEmail);
 });
 
